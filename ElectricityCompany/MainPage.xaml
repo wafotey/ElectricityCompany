@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ElectricityCompany"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+			x:Class="ElectricityCompany.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontIcon">
+                <On Platform="Android" Value="ElectricityApp.ttf" />
+                <On Platform="iOS" Value="Sync FontIcons" />
+                <On Platform="UWP" Value="Sync FontIcons.ttf#Sync FontIcons"/>
+            </OnPlatform>
+            <!--<FontImageSource x:Key="Heart_Icon"
+                             FontFamily="{StaticResource FontIcon}" Size="44"
+                             Glyph="&#x0042;" 
+                             Color="White" />-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Welcome to Syncfusion Xamarin.Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <button:SfButton x:Name="circleButton" 
+                                     Grid.Row="3" 
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     HorizontalTextAlignment="Center"
+                                     VerticalTextAlignment="Center"
+                                     Text="&#x0045;"
+                                     BorderWidth="0"
+                                     FontSize="20"
+                                     CornerRadius="40"
+                         FontFamily="{StaticResource FontIcon}"></button:SfButton>
+
+        <button:SfButton x:Name="outlineButton"
+                                     Grid.Row="1"
+                                     Grid.Column="1" 
+                                     Text="Outline Button"
+                                     TextColor="Accent"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     BackgroundColor="White"
+                                     CornerRadius="0"
+                                     BorderColor="Accent">
+            <button:SfButton.BorderWidth>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="2" />
+                    <On Platform="WPF" Value="2"/>
+                    <On Platform="Android" Value="1" />
+                    <On Platform="UWP" Value="2" />
+                </OnPlatform>
+            </button:SfButton.BorderWidth>
+        </button:SfButton>
+
+        <!--<Image>
+            <Image.Source>
+                <FontImageSource Glyph="&#xeC43;" 
+                        Color="Orange" 
+                        FontFamily="{OnPlatform iOS=MetroStudio, Android=MetroStudio.ttf#, UWP= MetroStudio.ttf#MetroStudio}" 
+                        Size="44" />
+            </Image.Source>
+        </Image>-->
+    </StackLayout>
+    
+</ContentPage>
